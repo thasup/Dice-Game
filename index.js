@@ -1,7 +1,8 @@
 // Define global variables
-const   img1 = document.getElementsByClassName("img1"),
-        img2 = document.getElementsByClassName("img2"),
-        head = document.getElementsByTagName("h1");
+const img1 = document.getElementsByClassName("img1"),
+    img2 = document.getElementsByClassName("img2"),
+    head = document.getElementsByTagName("h1"),
+    roll = document.getElementsByTagName("h3");
 
 let randomNumber1 = Math.floor(Math.random() * 6) + 1;
 let randomNumber2 = Math.floor(Math.random() * 6) + 1;
@@ -20,4 +21,10 @@ if (randomNumber1 < randomNumber2) {
 }
 
 head[0].innerHTML = `<h1>${result}</h1>`;
+
+roll[0].addEventListener("click", () => {
+    location.reload();
+    console.log("clicked!");
+    return false;
+});
 
